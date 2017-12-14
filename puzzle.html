@@ -1,42 +1,59 @@
-</!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Pexseso</title>
-	<link rel="stylesheet" href="style/puzzlestyle.css">
-	<script src="puzzlejava.js"></script>
-</head>
-<body>
-	<div id="gameboard" align="center">
-		<table width="640" >
-			<tr>
-				<td><img src="back.png" class="card" id="img00" onclick="clickIMG(00)"></td>
-				<td><img src="back.png" class="card" id="img01" onclick="clickIMG(01)"></td>
-				<td><img src="back.png" class="card" id="img02" onclick="clickIMG(02)"></td>
-				<td><img src="back.png" class="card" id="img03" onclick="clickIMG(03)"></td>
-			</tr>
-			<tr>
-				<td><img src="back.png" class="card" id="img10" onclick="clickIMG(10)"></td>
-				<td><img src="back.png" class="card" id="img11" onclick="clickIMG(11)"></td>
-				<td><img src="back.png" class="card" id="img12" onclick="clickIMG(12)"></td>
-				<td><img src="back.png" class="card" id="img13" onclick="clickIMG(13)"></td>
-			</tr>
-			<tr>
-				<td><img src="back.png" class="card" id="img20" onclick="clickIMG(20)"></td>
-				<td><img src="back.png" class="card" id="img21" onclick="clickIMG(21)"></td>
-				<td><img src="back.png" class="card" id="img22" onclick="clickIMG(22)"></td>
-				<td><img src="back.png" class="card" id="img23" onclick="clickIMG(23)"></td>
-			</tr>
-			<tr>
-				<td><img src="back.png" class="card" id="img30" onclick="clickIMG(30)"></td>
-				<td><img src="back.png" class="card" id="img31" onclick="clickIMG(31)"></td>
-				<td><img src="back.png" class="card" id="img32" onclick="clickIMG(32)"></td>
-				<td><img src="back.png" class="card" id="img33" onclick="clickIMG(33)"></td>
-			</tr>
-			
-		</table>
-		
-	</div>
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<META CHARSET="UTF-8">
+		<TITLE>PEXESO</TITLE>
+		<LINK REL="stylesheet" HREF="puzzlestyle.css">
+		<SCRIPT SRC="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></SCRIPT>
+		<SCRIPT SRC="puzzlejava.js"></SCRIPT>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</HEAD>
 
-</body>
-</html>
+	<BODY ONLOAD="shuffle()">
+		<DIV class="col-md-2" align="center">
+			<DIV CLASS="playersName" ID="Player1" ONDBLCLICK="changeName(1)">Player 1</DIV>
+			<DIV CLASS="score" ID="score1">Score: 0</DIV>
+			<DIV>
+				<TABLE ID="tableP1"></TABLE>
+			</DIV>
+		</DIV>
+		<DIV class="col-md-8" ID="gameboard" ALIGN="CENTER">
+			<TABLE WIDTH="640" BORDER="0">
+				<TR>
+					<TD><IMG SRC="img/back.png" CLASS="card" ID="img00" ONCLICK="clickImg(00)" WIDTH="150"></TD>
+					<TD><IMG SRC="img/back.png" CLASS="card" ID="img01" ONCLICK="clickImg(01)" WIDTH="150"></TD>
+					<TD><IMG SRC="img/back.png" CLASS="card" ID="img02" ONCLICK="clickImg(02)" WIDTH="150"></TD>
+					<TD><IMG SRC="img/back.png" CLASS="card" ID="img03" ONCLICK="clickImg(03)" WIDTH="150"></TD>
+				</TR>
+
+				<TR>
+					<TD><IMG SRC="img/back.png" CLASS="card" ID="img10" ONCLICK="clickImg(10)" WIDTH="150"></TD>
+					<TD><IMG SRC="img/back.png" CLASS="card" ID="img11" ONCLICK="clickImg(11)" WIDTH="150"></TD>
+					<TD><IMG SRC="img/back.png" CLASS="card" ID="img12" ONCLICK="clickImg(12)" WIDTH="150"></TD>
+					<TD><IMG SRC="img/back.png" CLASS="card" ID="img13" ONCLICK="clickImg(13)" WIDTH="150"></TD>
+				</TR>
+
+				<TR>
+					<TD><IMG SRC="img/back.png" CLASS="card" ID="img20" ONCLICK="clickImg(20)" WIDTH="150"></TD>
+					<TD><IMG SRC="img/back.png" CLASS="card" ID="img21" ONCLICK="clickImg(21)" WIDTH="150"></TD>
+					<TD><IMG SRC="img/back.png" CLASS="card" ID="img22" ONCLICK="clickImg(22)" WIDTH="150"></TD>
+					<TD><IMG SRC="img/back.png" CLASS="card" ID="img23" ONCLICK="clickImg(23)" WIDTH="150"></TD>
+				</TR>
+
+				<TR>
+					<TD><IMG SRC="img/back.png" CLASS="card" ID="img30" ONCLICK="clickImg(30)" WIDTH="150"></TD>
+					<TD><IMG SRC="img/back.png" CLASS="card" ID="img31" ONCLICK="clickImg(31)" WIDTH="150"></TD>
+					<TD><IMG SRC="img/back.png" CLASS="card" ID="img32" ONCLICK="clickImg(32)" WIDTH="150"></TD>
+					<TD><IMG SRC="img/back.png" CLASS="card" ID="img33" ONCLICK="clickImg(33)" WIDTH="150"></TD>
+				</TR>
+			</TABLE>
+		</DIV>
+		<DIV class="col-md-2" align="center">
+			<DIV CLASS="playersName" ID="Player2" ONDBLCLICK="changeName(2)">Player 2</DIV>
+			<DIV CLASS="score" ID="score2">Score: 0</DIV>
+			<TABLE ID="tableP2"></TABLE>
+		</DIV>
+		
+	</BODY>
+
+</HTML>
